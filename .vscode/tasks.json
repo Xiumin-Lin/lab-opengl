@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: clang++ build active file",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I",
+                "/opt/homebrew/opt/glew/include",
+                "-I",
+                "/opt/homebrew/opt/glfw/include",
+                "-L",
+                "/opt/homebrew/opt/glew/lib",
+                "-L",
+                "/opt/homebrew/opt/glfw/lib",
+                "-lGLEW",
+                "-lglfw",
+                "-framework",
+                "OpenGL"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/clang++"
+		}
+	]
+}
